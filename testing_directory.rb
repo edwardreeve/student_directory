@@ -23,8 +23,10 @@ def print_header
 end
 
 def print(students)
-  students.each_with_index do |student, index|
-    puts "#{index + 1}. #{student[:name]} (#{student[:cohort]} cohort)"
+  ind = 0
+  until ind == students.length
+    puts "#{ind + 1}. #{students[ind][:name]}, #{students[ind][:cohort]} cohort"
+    ind += 1
   end
 end
 
